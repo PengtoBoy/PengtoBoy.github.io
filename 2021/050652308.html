@@ -454,7 +454,17 @@
                 
 
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-05-06
+                </div>
+                
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    207
+                </div>
                 
 
                 
@@ -475,6 +485,7 @@
 <li>完成第一步后，会在\source\_posts目录下生成一个对于的md文件</li>
 <li>在md文件中编写博客</li>
 <li>完成后 hexo clean –&gt; hexo g –&gt;hexo s(预览一下) –&gt;hexo d (上传部署)</li>
+<li>要删除该博文只需要去_post下删除对于的markdown博文即可</li>
 </ol>
 <h2 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h2><ol>
 <li>要想生成目录，不用在md文件编写时加上，这样解析不出来，要在最开始将设置toc: true，这样就会部署之后会自动生成目录</li>
@@ -865,7 +876,7 @@
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('1'),
+            collapseDepth: Number('3'),
             headingSelector: 'h2, h3, h4'
         });
 
