@@ -4,11 +4,55 @@
   
     
     <entry>
+      <title>JVM、JDK、JER介绍</title>
+      <link href="2021/050625004.html"/>
+      <url>2021/050625004.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="JVM-Java-virtue-machine"><a href="#JVM-Java-virtue-machine" class="headerlink" title="JVM(Java virtue machine)"></a>JVM(Java virtue machine)</h2><p>1）JVM是一个虚拟计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器，<strong>包含在JDK中</strong><br>2） 对于不同的平台，有不同的虚拟机。<br>3）Java 虚拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，到处运行”<br><img src="https://img-blog.csdnimg.cn/20210430110848950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="JDK介绍"><a href="#JDK介绍" class="headerlink" title="JDK介绍"></a>JDK介绍</h2><ol><li>JDK(Java Development Kit Java 开发工具包) JDK=JRE+java的开发工具[java,javac,javadoc,javap等]</li><li>JDK是提供给Java开发人员使用的，其中包含java的开发工具，也包括JRE。所有安装了JDK就不用单独安装JRE</li></ol><h2 id="JRE介绍"><a href="#JRE介绍" class="headerlink" title="JRE介绍"></a>JRE介绍</h2><ol><li>JRE(Java Runtime Environment   java运行环境)  JRE=JVM+Java核心类库</li><li>包括Java虚拟机(JVM Java Virtual Machine)和java程序所需要的核心类库。如果想要运行一个开发好的Java程序，只需要安装JRE即可</li></ol><h2 id="JVM、JDK、JRE包含关系"><a href="#JVM、JDK、JRE包含关系" class="headerlink" title="JVM、JDK、JRE包含关系"></a>JVM、JDK、JRE包含关系</h2><ol><li>JDK = JRE + 开发工具集（例如 Javac,java 编译工具等)</li><li>JRE = JVM + Java SE 标准类库（java 核心类库）</li><li>如果只想运行开发好的 .class 文件 只需要 JR</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>发表博客步骤及一些细节</title>
+      <link href="2021/050652308.html"/>
+      <url>2021/050652308.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol><li>在博客目录下Git Bash –&gt;  hexo new “文章名字” </li><li>完成第一步后，会在\source\_posts目录下生成一个对于的md文件</li><li>在md文件中编写博客</li><li>完成后 hexo clean –&gt; hexo g –&gt;hexo s(预览一下) –&gt;hexo d (上传部署)</li></ol><h2 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h2><ol><li>要想生成目录，不用在md文件编写时加上，这样解析不出来，要在最开始将设置toc: true，这样就会部署之后会自动生成目录</li><li>目录结构从## ，不要从# 开始，这样目录解析不出来</li><li>目录之间空一行，这样才能点击跳到指定位置</li><li>发表有图片的博客时，要想在图片在本地很麻烦，直接用网络地址</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文件/目录权限 Linux</title>
       <link href="2021/050617999.html"/>
       <url>2021/050617999.html</url>
       
-        <content type="html"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210426125945693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70" alt="1"></p><h1 id="rwx详解"><a href="#rwx详解" class="headerlink" title="rwx详解"></a>rwx详解</h1><h2 id="rwx作用到文件"><a href="#rwx作用到文件" class="headerlink" title="rwx作用到文件"></a>rwx作用到文件</h2><ol><li>[ r ]：代表可读(read)：可以读取，查看</li><li>[ w ]：代表可写(write)：可修改，但不代表可以删除该文件，删除一个文件的前提是对该目录也拥有写权限</li><li>[ x ]：代表可执行(execute)：可以被执行<h2 id="rwx作用到目录"><a href="#rwx作用到目录" class="headerlink" title="rwx作用到目录"></a>rwx作用到目录</h2></li><li>[ r ]：代表可读(read)：可以读取，ls查看目录内容</li><li>[ w ]：代表可写(write)：可修改，对目录内创建+删除+重命名目录</li><li>[ x ]：代表可执行(execute)：可以进入该目录<h1 id="修改权限-chmod"><a href="#修改权限-chmod" class="headerlink" title="修改权限 -chmod"></a>修改权限 -chmod</h1>可以修改文件或目录的权限</li></ol><ul><li>第一种方式：+、-、= 变更权限<br>u：所有者 g：所在组  o：其他人 a：所有人<br>1）chmod u=rwx,g=rx,o=x 文件/目录名<br>2）chmod o+w 文件/目录名<br>3）chmod a-x 文件/目录名<br>实例：<br>1）给abc文件的所有者 读写执行 的权限，给所在组 读执行 权限，给其他组 读执行 权限<br>chmod u=rwx,g=rx,o=rx abc<br>2）给abc文件所有者除去执行权限，增加所在组写的权限<br>chmod u-x,g+w abc<br>3）给abc文件所有用户添加读权限<br>chmod a+r abc</li><li>第二种方式：通过数字变更权限<br>r=4，w=2，x=1  rwx=7<br>chmod u=rwx,g=rx,o=x 文件/目录名；相当于chmod 751 文件/目录名<h1 id="修改文件-目录所有者-chown"><a href="#修改文件-目录所有者-chown" class="headerlink" title="修改文件/目录所有者 chown"></a>修改文件/目录所有者 chown</h1>chown newowner 文件/目录名   (改变所有者)<br>chown newowner:newgroup 文件/目录名 (改变所有者，所在组)</li><li>R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将/home/kkk 目录下所有文件和目录的所有者都修改成tom<br>chown -R  tom /home/kkk<h1 id="修改文件-目录所在组-chgrp"><a href="#修改文件-目录所在组-chgrp" class="headerlink" title="修改文件/目录所在组 chgrp"></a>修改文件/目录所在组 chgrp</h1>chgrp newgroup 文件/目录 (改变所有组)</li><li>R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将 /home/kkk目录下的所有文件和目录的所在组都修改成mokapeng<br>chgrp -R  mokapeng /home/kkk</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p><img src="https://img-blog.csdnimg.cn/20210426125945693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70" alt="1"></p><h2 id="rwx详解"><a href="#rwx详解" class="headerlink" title="rwx详解"></a>rwx详解</h2><h3 id="rwx作用到文件"><a href="#rwx作用到文件" class="headerlink" title="rwx作用到文件"></a>rwx作用到文件</h3><ol><li>[ r ]：代表可读(read)：可以读取，查看</li><li>[ w ]：代表可写(write)：可修改，但不代表可以删除该文件，删除一个文件的前提是对该目录也拥有写权限</li><li>[ x ]：代表可执行(execute)：可以被执行</li></ol><h3 id="rwx作用到目录"><a href="#rwx作用到目录" class="headerlink" title="rwx作用到目录"></a>rwx作用到目录</h3><ol><li>[ r ]：代表可读(read)：可以读取，ls查看目录内容</li><li>[ w ]：代表可写(write)：可修改，对目录内创建+删除+重命名目录</li><li>[ x ]：代表可执行(execute)：可以进入该目录</li></ol><h2 id="修改权限-chmod"><a href="#修改权限-chmod" class="headerlink" title="修改权限 -chmod"></a>修改权限 -chmod</h2><p>可以修改文件或目录的权限</p><ul><li>第一种方式：+、-、= 变更权限<br>u：所有者 g：所在组  o：其他人 a：所有人<br>1）chmod u=rwx,g=rx,o=x 文件/目录名<br>2）chmod o+w 文件/目录名<br>3）chmod a-x 文件/目录名<br>实例：<br>1）给abc文件的所有者 读写执行 的权限，给所在组 读执行 权限，给其他组 读执行 权限<br>chmod u=rwx,g=rx,o=rx abc<br>2）给abc文件所有者除去执行权限，增加所在组写的权限<br>chmod u-x,g+w abc<br>3）给abc文件所有用户添加读权限<br>chmod a+r abc</li><li>第二种方式：通过数字变更权限<br>r=4，w=2，x=1  rwx=7<br>chmod u=rwx,g=rx,o=x 文件/目录名；相当于chmod 751 文件/目录名</li></ul><h2 id="修改文件-目录所有者-chown"><a href="#修改文件-目录所有者-chown" class="headerlink" title="修改文件/目录所有者 chown"></a>修改文件/目录所有者 chown</h2><p>chown newowner 文件/目录名   (改变所有者)<br>chown newowner:newgroup 文件/目录名 (改变所有者，所在组)<br>-R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将/home/kkk 目录下所有文件和目录的所有者都修改成tom<br>chown -R  tom /home/kkk</p><h1 id="修改文件-目录所在组-chgrp"><a href="#修改文件-目录所在组-chgrp" class="headerlink" title="修改文件/目录所在组 chgrp"></a>修改文件/目录所在组 chgrp</h1><p>chgrp newgroup 文件/目录 (改变所有组)<br>-R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将 /home/kkk目录下的所有文件和目录的所在组都修改成mokapeng<br>chgrp -R  mokapeng /home/kkk</p>]]></content>
       
       
       <categories>

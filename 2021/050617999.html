@@ -327,10 +327,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -385,21 +479,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://img-blog.csdnimg.cn/20210426125945693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70" alt="1"></p>
-<h1 id="rwx详解"><a href="#rwx详解" class="headerlink" title="rwx详解"></a>rwx详解</h1><h2 id="rwx作用到文件"><a href="#rwx作用到文件" class="headerlink" title="rwx作用到文件"></a>rwx作用到文件</h2><ol>
+                <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p><img src="https://img-blog.csdnimg.cn/20210426125945693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70" alt="1"></p>
+<h2 id="rwx详解"><a href="#rwx详解" class="headerlink" title="rwx详解"></a>rwx详解</h2><h3 id="rwx作用到文件"><a href="#rwx作用到文件" class="headerlink" title="rwx作用到文件"></a>rwx作用到文件</h3><ol>
 <li>[ r ]：代表可读(read)：可以读取，查看</li>
 <li>[ w ]：代表可写(write)：可修改，但不代表可以删除该文件，删除一个文件的前提是对该目录也拥有写权限</li>
-<li>[ x ]：代表可执行(execute)：可以被执行<h2 id="rwx作用到目录"><a href="#rwx作用到目录" class="headerlink" title="rwx作用到目录"></a>rwx作用到目录</h2></li>
+<li>[ x ]：代表可执行(execute)：可以被执行</li>
+</ol>
+<h3 id="rwx作用到目录"><a href="#rwx作用到目录" class="headerlink" title="rwx作用到目录"></a>rwx作用到目录</h3><ol>
 <li>[ r ]：代表可读(read)：可以读取，ls查看目录内容</li>
 <li>[ w ]：代表可写(write)：可修改，对目录内创建+删除+重命名目录</li>
-<li>[ x ]：代表可执行(execute)：可以进入该目录<h1 id="修改权限-chmod"><a href="#修改权限-chmod" class="headerlink" title="修改权限 -chmod"></a>修改权限 -chmod</h1>可以修改文件或目录的权限</li>
+<li>[ x ]：代表可执行(execute)：可以进入该目录</li>
 </ol>
+<h2 id="修改权限-chmod"><a href="#修改权限-chmod" class="headerlink" title="修改权限 -chmod"></a>修改权限 -chmod</h2><p>可以修改文件或目录的权限</p>
 <ul>
 <li>第一种方式：+、-、= 变更权限<br>u：所有者 g：所在组  o：其他人 a：所有人<br>1）chmod u=rwx,g=rx,o=x 文件/目录名<br>2）chmod o+w 文件/目录名<br>3）chmod a-x 文件/目录名<br>实例：<br>1）给abc文件的所有者 读写执行 的权限，给所在组 读执行 权限，给其他组 读执行 权限<br>chmod u=rwx,g=rx,o=rx abc<br>2）给abc文件所有者除去执行权限，增加所在组写的权限<br>chmod u-x,g+w abc<br>3）给abc文件所有用户添加读权限<br>chmod a+r abc</li>
-<li>第二种方式：通过数字变更权限<br>r=4，w=2，x=1  rwx=7<br>chmod u=rwx,g=rx,o=x 文件/目录名；相当于chmod 751 文件/目录名<h1 id="修改文件-目录所有者-chown"><a href="#修改文件-目录所有者-chown" class="headerlink" title="修改文件/目录所有者 chown"></a>修改文件/目录所有者 chown</h1>chown newowner 文件/目录名   (改变所有者)<br>chown newowner:newgroup 文件/目录名 (改变所有者，所在组)</li>
-<li>R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将/home/kkk 目录下所有文件和目录的所有者都修改成tom<br>chown -R  tom /home/kkk<h1 id="修改文件-目录所在组-chgrp"><a href="#修改文件-目录所在组-chgrp" class="headerlink" title="修改文件/目录所在组 chgrp"></a>修改文件/目录所在组 chgrp</h1>chgrp newgroup 文件/目录 (改变所有组)</li>
-<li>R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将 /home/kkk目录下的所有文件和目录的所在组都修改成mokapeng<br>chgrp -R  mokapeng /home/kkk</li>
+<li>第二种方式：通过数字变更权限<br>r=4，w=2，x=1  rwx=7<br>chmod u=rwx,g=rx,o=x 文件/目录名；相当于chmod 751 文件/目录名</li>
 </ul>
+<h2 id="修改文件-目录所有者-chown"><a href="#修改文件-目录所有者-chown" class="headerlink" title="修改文件/目录所有者 chown"></a>修改文件/目录所有者 chown</h2><p>chown newowner 文件/目录名   (改变所有者)<br>chown newowner:newgroup 文件/目录名 (改变所有者，所在组)<br>-R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将/home/kkk 目录下所有文件和目录的所有者都修改成tom<br>chown -R  tom /home/kkk</p>
+<h1 id="修改文件-目录所在组-chgrp"><a href="#修改文件-目录所在组-chgrp" class="headerlink" title="修改文件/目录所在组 chgrp"></a>修改文件/目录所在组 chgrp</h1><p>chgrp newgroup 文件/目录 (改变所有组)<br>-R(大写)：如果是一个目录 则使其下所有子文件或目录递归生效<br>eg：将 /home/kkk目录下的所有文件和目录的所在组都修改成mokapeng<br>chgrp -R  mokapeng /home/kkk</p>
 
                 
             </div>
@@ -637,18 +734,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/050617999.html">
+                <a href="/2021/050652308.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="文件/目录权限 Linux">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="发表博客步骤及一些细节">
                         
-                        <span class="card-title">文件/目录权限 Linux</span>
+                        <span class="card-title">发表博客步骤及一些细节</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -658,27 +754,22 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            彭嘉欣
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
@@ -751,6 +842,100 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
