@@ -183,7 +183,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/loading1.gif" class="logo-img" alt="LOGO">
+                    <img src="/medias/loading.gif" data-original="/loading1.gif" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Mokapeng</span>
                 </a>
@@ -282,7 +282,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/loading1.gif" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/loading1.gif" class="logo-img circle responsive-img">
         
         <div class="logo-name">Mokapeng</div>
         <div class="logo-desc">
@@ -637,11 +637,11 @@
 <h2 id="crond"><a href="#crond" class="headerlink" title="crond"></a>crond</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>crontab 进行定时任务的设置<br>任务调度：指系统在某个时间执行特定的命令或程序<br>调度分类：</p>
 <ol>
 <li>系统工作：有些系统工作必须周而复始地执行。如病毒扫描等</li>
-<li>个别用户工作：个别用户可能希望执行某些程序，如对mysql备份<br><img src="https://img-blog.csdnimg.cn/20210428134925842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
+<li>个别用户工作：个别用户可能希望执行某些程序，如对mysql备份<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210428134925842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
 </ol>
 <h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>crontab [选项]<br>常用选项：<br>-e：编辑crontab定时任务<br>-l：查询crontab任务<br>-r：删除当前用户所有crontab任务</p>
 <h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h3><p>设置任务调度文件：/etc/crontab<br>设置个人任务调度。执行crontab -e<br>接着输入任务到调度文件<br>eg:*/1 * * * * ls -l /etc/ &gt; /tmp/to.txt  (注意空格；即每小时的每分钟执行一次ls -l /etc/ &gt; /tmp/to.txt )</p>
-<h4 id="参数细节说明"><a href="#参数细节说明" class="headerlink" title="参数细节说明"></a>参数细节说明</h4><p>5个占位符的说明<br><img src="https://img-blog.csdnimg.cn/2021042813293985.png"><br>特殊符号说明<br><img src="https://img-blog.csdnimg.cn/20210428133657351.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>特定时间执行任务案例<br><img src="https://img-blog.csdnimg.cn/20210428133823350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p>
+<h4 id="参数细节说明"><a href="#参数细节说明" class="headerlink" title="参数细节说明"></a>参数细节说明</h4><p>5个占位符的说明<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/2021042813293985.png"><br>特殊符号说明<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210428133657351.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>特定时间执行任务案例<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210428133823350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p>
 <h4 id="crond任务调度实例"><a href="#crond任务调度实例" class="headerlink" title="crond任务调度实例"></a>crond任务调度实例</h4><p>1）：每隔1分钟，就将当前日期信息，追加到/tmp/mydate文件中<br>*/1 * * * * date &gt;&gt; /tmp/mydate<br>2）：每隔1分钟，就将当前日期和日历都追加到/home/mycal中<br>方法1：crontab -e  然后写两条指令即可<br>方法2：先写个脚本，然后定时执行该脚本</p>
 <ol>
 <li>vim /home/my.sh 写入内容：date &gt;&gt; /home/mycal和cal &gt;&gt; /home/mycal</li>
@@ -657,10 +657,10 @@
 <li>at命令是一次性定时计划任务，at的守护进程atd会以后台模式运行，检查作业队列来运行</li>
 <li>默认情况下，atd守护进程(运行在后台的特殊进程)每60秒检查作业队列，有作业时，会检查作业运行时间，如果时间与当前时间匹配，则运行此作业</li>
 <li>at命令是一次性定时计划任务，执行完一个任务后不再执行此任务</li>
-<li>在使用at命令的时候，一定要保证atd进程的启动，可以使用相关指令来查看<br>(可用ps -ef grep | ‘atd’ 检查atd是否在运行)<br><img src="https://img-blog.csdnimg.cn/20210502165654628.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
+<li>在使用at命令的时候，一定要保证atd进程的启动，可以使用相关指令来查看<br>(可用ps -ef grep | ‘atd’ 检查atd是否在运行)<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210502165654628.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
 </ol>
 <h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>at [选项] [时间]<br>Ctrl+D  结束at命令输入，要输入两次才有反应<br>atq  查看系统中有没有执行的工作任务<br>atrm 编号       删除已经设置的任务</p>
-<h4 id="at命令选项："><a href="#at命令选项：" class="headerlink" title="at命令选项："></a>at命令选项：</h4><p><img src="https://img-blog.csdnimg.cn/20210502162320547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p>
+<h4 id="at命令选项："><a href="#at命令选项：" class="headerlink" title="at命令选项："></a>at命令选项：</h4><p><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210502162320547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p>
 <h4 id="at时间定义"><a href="#at时间定义" class="headerlink" title="at时间定义"></a>at时间定义</h4><p>at指定时间的方法：</p>
 <ol>
 <li>接受当天的hh:mm（小时:分钟）式的时间指定。假如该时间已过，则放在第二天执行</li>
@@ -670,7 +670,7 @@
 <li>使用相对计时法。指定格式为：now + count time-units，now就是当前时间，time-unites为时间单位(minutes、hours、days、weeks)，count是时间数量。eg：now + 5 minutes</li>
 <li>直接today、tomorrow来指定完成命令时间</li>
 </ol>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>1）2天后的下午5点执行 /bin/ls /home<br><img src="https://img-blog.csdnimg.cn/20210502163903878.png"><br>2）明天17点钟，输出时间到指定文件内 比如/root/date1.log<br><img src="https://img-blog.csdnimg.cn/20210502164818432.png"><br>3）删除已经设置的任务，atrm 编号 eg：atrm 1</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>1）2天后的下午5点执行 /bin/ls /home<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210502163903878.png"><br>2）明天17点钟，输出时间到指定文件内 比如/root/date1.log<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210502164818432.png"><br>3）删除已经设置的任务，atrm 编号 eg：atrm 1</p>
 
                 
             </div>
@@ -870,10 +870,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -943,7 +943,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="定时任务crond&amp;at Linux">
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="定时任务crond&amp;at Linux">
                         
                         <span class="card-title">定时任务crond&amp;at Linux</span>
                     </div>
@@ -997,7 +997,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JVM、JDK、JER介绍">
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="JVM、JDK、JER介绍">
                         
                         <span class="card-title">JVM、JDK、JER介绍</span>
                     </div>
@@ -1536,7 +1536,13 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":180,"height":360},"mobile":{"show":false,"react":{"opacity":0.7}}});</script></body>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":180,"height":360},"mobile":{"show":false,"react":{"opacity":0.7}}});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
 <script type="text/javascript">
