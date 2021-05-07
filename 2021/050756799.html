@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JVM、JDK、JER介绍, HTML,CSS,JavaScript,JQuery,React,Vue.js,Linux">
+    <meta name="keywords" content="Linux基本指令, HTML,CSS,JavaScript,JQuery,React,Vue.js,Linux">
     <meta name="description" content="专注于IT，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JVM、JDK、JER介绍 | Mokapeng</title>
+    <title>Linux基本指令 | Mokapeng</title>
     <link rel="icon" type="image/gif" href="/loading1.gif">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -452,12 +452,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JVM、JDK、JER介绍</h1>
+                    <h1 class="description center-align post-title">Linux基本指令</h1>
                 </div>
             </div>
         </div>
@@ -598,7 +598,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-06
+                    2021-05-07
                 </div>
                 
 
@@ -612,7 +612,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    275
+                    3.6k
                 </div>
                 
 
@@ -629,20 +629,112 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JVM-Java-virtue-machine"><a href="#JVM-Java-virtue-machine" class="headerlink" title="JVM(Java virtue machine)"></a>JVM(Java virtue machine)</h2><p>1）JVM是一个虚拟计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器，<strong>包含在JDK中</strong><br>2） 对于不同的平台，有不同的虚拟机。<br>3）Java 虚拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，到处运行”<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210430110848950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p>
-<h2 id="JDK介绍"><a href="#JDK介绍" class="headerlink" title="JDK介绍"></a>JDK介绍</h2><ol>
-<li>JDK(Java Development Kit Java 开发工具包) JDK=JRE+java的开发工具[java,javac,javadoc,javap等]</li>
-<li>JDK是提供给Java开发人员使用的，其中包含java的开发工具，也包括JRE。所有安装了JDK就不用单独安装JRE</li>
+                <h2 id="关机、重启"><a href="#关机、重启" class="headerlink" title="关机、重启"></a>关机、重启</h2><p>shutdown -h now     立刻进行关机 (-h 即halt 停止)<br>shutdown -h 1            1分钟后关机(如果直接shutdown 默认为这个)<br>shutdown -r now        立刻重启(-r 即reboot 重启)<br>halt                            关机和上面作用一样(不同在于halt不会关闭电源，shutdown会)<br>reboot                        现在重启<br>sync                            把内存的数据同步到磁盘<br>注意细节：</p>
+<ol>
+<li>不管是重启还是关机，首先要运行sync命令，把内存的数据写到磁盘</li>
+<li>目前的 shutdown/reboot/halt 等命令均已经提前进行sync，但最好自己执行一边，以防万一！</li>
 </ol>
-<h2 id="JRE介绍"><a href="#JRE介绍" class="headerlink" title="JRE介绍"></a>JRE介绍</h2><ol>
-<li>JRE(Java Runtime Environment   java运行环境)  JRE=JVM+Java核心类库</li>
-<li>包括Java虚拟机(JVM Java Virtual Machine)和java程序所需要的核心类库。如果想要运行一个开发好的Java程序，只需要安装JRE即可</li>
+<h2 id="用户登录-切换-和注销"><a href="#用户登录-切换-和注销" class="headerlink" title="用户登录(切换)和注销"></a>用户登录(切换)和注销</h2><p>登录时尽量少用root账号登录，权限过大，容易误操作。可以利用普通用户登录，登陆后再用” su - 用户名” 命令切换成管理员身份<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210419161051184.png"><br>(注意：密码输入时不会显示和变化，且su - 用户名 <strong>注意空格</strong>)<br>注销用户：提示符下输入logout即可注销用户<br>使用细节：</p>
+<ol>
+<li>logout注销指令在图形运行级别无效，在运行级别3下有效</li>
+<li>从高权限切换到低权限的用户，不需要输入密码，反之需要</li>
+<li>需要返回原来用户时，使用exit/logout指令</li>
 </ol>
-<h2 id="JVM、JDK、JRE包含关系"><a href="#JVM、JDK、JRE包含关系" class="headerlink" title="JVM、JDK、JRE包含关系"></a>JVM、JDK、JRE包含关系</h2><ol>
-<li>JDK = JRE + 开发工具集（例如 Javac,java 编译工具等)</li>
-<li>JRE = JVM + Java SE 标准类库（java 核心类库）</li>
-<li>如果只想运行开发好的 .class 文件 只需要 JR</li>
+<h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p>Linux系统是一个多用户多任务的操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号身份进入系统</p>
+<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><p>useradd 用户名<br>细节说明：</p>
+<ol>
+<li>创建用户成功后，会自动的创建和用户同名的家目录(默认家目录在/home里)</li>
+<li>也可以通过useradd -d 指定目录 新的用户名 ，给新创建的用户指定家目录<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210419195023680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>上面图片就是创建了用户名为mokapeng2，且默认在home下创建家目录mokapeng2。<br>同时也创建了用户名为king的用户，且指定家目录为home下的test。<br>tips：当指定用户家目录时，不能指定已经存在的目录。</li>
 </ol>
+<h3 id="指定或修改密码"><a href="#指定或修改密码" class="headerlink" title="指定或修改密码"></a>指定或修改密码</h3><p>passwd 用户名  注意:一定要指定用户名，不然会默认当前用户<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210419194321388.png"><br>tips：虽然这提示我是无效密码，但我取消了安全策略，所有一样有用，工作中要设置符合安全策略的密码</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>删除用户分两种情况</p>
+<ul>
+<li>删除用户，但要保留家目录        userdel 用户名  (之后再想删家目录，可直接删除此文件夹即可)</li>
+<li>删除用户以及用户家目录        userdel -r 用户名  （一般情况下建议保留家目录，保留资料)</li>
+</ul>
+<h3 id="查询用户信息"><a href="#查询用户信息" class="headerlink" title="查询用户信息"></a>查询用户信息</h3><p>id 用户名<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210419200650949.png"></p>
+<h3 id="查看当前用户-登录用户"><a href="#查看当前用户-登录用户" class="headerlink" title="查看当前用户/登录用户"></a>查看当前用户/登录用户</h3><p>whoami/who am i<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/2021041920124768.png"><br>tips：只会显示你最初登录的id信息，如果你登录root用户，切换成mokapeng用户，那显示的依旧是root用户</p>
+<h3 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h3><p>类似于角色，系统可以对有共性/权限的多个用户进行统一的管理</p>
+<ul>
+<li>新增组<br>指令： groupadd 组名</li>
+<li>删除组<br>指令：groupdel 组名</li>
+<li>增加用户时，指定分组(没有指定时，会默认生成一个跟用户名相同的组，并把用户放到改组)<br>useradd -g 用户组 用户名<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210419210336847.png"></li>
+<li>修改用户的组<br>usermod -g 要加入的组名 用户名<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/2021041921063530.png"></li>
+</ul>
+<h3 id="用户和组相关的文件"><a href="#用户和组相关的文件" class="headerlink" title="用户和组相关的文件"></a>用户和组相关的文件</h3><ul>
+<li>/etc/passwd 文件<br>用户(user)的配置文件，记录用户的各种信息<br>每行的含义：  <strong>用户名:口令(密码):用户标识号:组标识号:注释性描述:主目录:登录Shell</strong></li>
+<li>/etc/shadow 文件<br>口令配置文件<br>每行含义：  <strong>登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志</strong></li>
+<li>/etc/group 文件<br>组(group)的配置文件，记录Linux包含的组的信息<br>每行含义：  <strong>组名:口令:组标识号:组内用户列表</strong></li>
+</ul>
+<h2 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a>运行级别</h2><ul>
+<li>基本介绍<br>运行级别说明：<br> 0：关机<br> 1：单用户【找回丢失的密码】<br> 2：多用户状态没有网络服务<br> 3：多用户状态有网络服务<br> 4：系统未使用保留给用户<br> 5：图形界面<br> 6：系统重启<br>常用的运行级别为3、5，也可指定默认运行级别<br>CentOS7中，可以通过<strong>init 级别</strong>切换运行级别<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210420122728552.png"></li>
+</ul>
+<h3 id="指定默认运行界别"><a href="#指定默认运行界别" class="headerlink" title="指定默认运行界别"></a>指定默认运行界别</h3><ul>
+<li>CentOS7前后运行级别说明<br>在CentOS7以前，在/etc/inittab文件中可进行修改<br>在CentOS5后进行了简化（分为两种），如下：</li>
+</ul>
+<p><strong>multi-user.target</strong>:analogous to runlevel 3   ：即多用户级别类似于原来的级别3<br><strong>graphical.target</strong>:analogous to runlevel 5       ：即图形化级别类似于原来的5<br># To view current default target,run (查看当前默认运行级别指令):<br>systemctl get-default<br># To set a default target,run(设置默认运行级别指令):<br>systemctl set-default TARGET.target<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210420123852984.png"></p>
+<h2 id="找回root密码-CentOS7"><a href="#找回root密码-CentOS7" class="headerlink" title="找回root密码(CentOS7)"></a>找回root密码(CentOS7)</h2><ul>
+<li>启动系统，进入开机界面，在界面中按”e”进入编辑界面<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210420125420703.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
+<li>进入编辑界面后，使用键盘上下键把光标往下移动，找到”Linux16”开头内容所在行，在行的最后面输入： <strong>init=/bin/sh</strong> <img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210420125850689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
+<li>接着，输入完成后，直接按快捷键：Ctrl+x 进入单用户模式</li>
+<li>接着在光标闪烁位置输入：mount -o remount,rw / (注意单词间有空格)。完成后回车<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210420130211154.png"></li>
+<li>在新的一行最后输入：passwd，完成后回车。输入密码，然后再确认密码即可。密码修改成功后，会显示passwd……样式，说明成功<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/2021042013042827.png"></li>
+<li>接着，在鼠标闪烁位置(最后一行) 输入：touch /.autorelabel(注意touch后有空格),完成回车</li>
+<li>继续在光标闪烁位置，输入：exec /sbin/init  (注意exec后有空格)。完成回车，等待系统自动修改密码，（时间较长），完成后，系统会重启。</li>
+</ul>
+<h2 id="帮助指令"><a href="#帮助指令" class="headerlink" title="帮助指令"></a>帮助指令</h2><ul>
+<li>man 获取帮助信息<br>man [命令或配置文件]    （功能：获取帮助信息）<br>eg：查看ls命令的帮助信息:  man ls</li>
+<li>help<br>help 命令  (功能：获得shell内置命令的帮助信息)<br>eg: help cd</li>
+</ul>
+<h2 id="文件目录指令"><a href="#文件目录指令" class="headerlink" title="文件目录指令"></a>文件目录指令</h2><ul>
+<li>pwd 指令<br>基本语法：pwd     (功能：显示当前工作目录的绝对路径)</li>
+<li>ls 指令<br>基本语法：ls [选项] [目录或文件]<br>常用选项：</li>
+<li>a:显示当前目录所有的文件和目录，包括隐藏的</li>
+<li>l:以列表的方式显示信息<ul>
+<li>cd 指令<br>基本语法:cd [参数]     (功能：切换到指定目录)<br>cd ~ 或cd：回到<strong>自己</strong>的家目录<br>cd.. :回到上一级目录</li>
+<li>mkdir 指令  用于创建目录<br>基本语法 [选项] 要创建的目录<br>常用选项：</li>
+</ul>
+</li>
+<li>p：创建多级目录 如创建多级目录/home/animal/tiger(即home下创建animal，且anmial下创建tiger)<br>mkdir -p /home/animal/tiger<ul>
+<li>rmdir指令  删除<strong>空目录</strong><br>基本语法：rmdir [选项] 要删除的空目录<br>使用细节：rmdir 删除的是空目录，如果目录下有内容则无法删除。如果要删除非空目录，需要用rm -rf 要删除的目录(r是recursion递归的简写，f是force的简写)</li>
+<li>touch 指令  创建空文件<br>基本语法：touch 文件名称<br>eg:在home下创建一个空文件hello.txt：touch /home/hello.txt</li>
+<li>cp指令 拷贝文件(或文件目录)到指定目录<br>基本语法：cp [选项] source dest<br>常用选项：-r ：recursion递归复制<strong>整个文件夹</strong><br>eg:将/home/bbb整个目录拷贝到 /opt：cp -r /home/bbb/ /opt/<br>强制覆盖不提示方法：\cp     eg:\cp  -r /home/bbb/ /opt/</li>
+<li>rm指令 移除文件或目录<br>基本语法：rm [选项] 要删除的文件或目录<br>常用选项：-r：recursion递归删除整个文件夹 -f：强制删除不提示</li>
+<li>mv 指令 移动文件与目录 或重命名<br>基本语法：<br>mv oldNameFile new NameFile   (功能：重命名)<br>mv /old/movefile /targetfile  (功能：移动文件或目录)</li>
+<li>cat 指令  查看文件内容(只看不可修改，所有更安全)<br>基本语法：cat [选项] 要查看的文件<br>常用选项： -n：显示行号<br>使用细节：cat只能看不能改，为了浏览方便，一般会带上<strong>管道命令</strong> | more<br>eg：cat -n /etc/profile | more</li>
+<li>more 指令 一个基于VI编辑器的文本过滤器，它以全屏幕的方式按页显示文本文件的内容。more中内置了若干快捷键(交换的指令)，如下：<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210424141236128.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
+</ul>
+</li>
+<li>less指令 用来分屏查看文件内容，它的功能与more指令类似，但比more更强大，支持各种显示终端。less指令在显示文件内容时，并不是一次性将整个文件加载之后才显示，而是加载需要显示的内容，对大型文件有较高的效率<br>基本语法：less 要查看的文件<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210424142119939.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li>
+<li>echo指令：输出内容到控制台<br>基本语法：echo [选项] [输出内容]<br>eg:使用echo输出环境变量$PATH：echo $PATH<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210424142917902.png"><br>使用echo输出 hello，world<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210424143012733.png"></li>
+<li>head指令：显示文件开头部分内容，默认情况下head指令显示文件前10行<br>基本语法：head 文件<br>eg: head -n 5 文件 查看文件头5行内容</li>
+<li>tail指令：输出文件尾部的内容，默认显示文件后10行<br>基本语法：<br>tail 文件       查看尾10行<br>tail -n 5           查看尾5行<br>tail -f 文件     实时追踪文档的所有更新(退出则Ctrl+C)</li>
+<li>&gt; 指令和&gt;&gt;指令<br>&gt;：输出重定向(直接覆盖)    &gt;&gt;：追加(增至末尾)<br>基本语法：<br>1）ls -l &gt; 文件                    列表的内容写入文件中<br>2）ls -al &gt;&gt; 文件                列表的内容追加到文件的末尾<br>3）cat 文件1 &gt; 文件2        文件1的内容覆盖到文件2<br>4）echo ‘内容’ &gt;&gt; 文件</li>
+<li>ln指令 软连接，也称符号连接，类似于快捷方式，主要存放链接其他文件的路径<br>基本语法：<br>ln -s [源文件目录] [软链接名]  功能：给原文件创建一个软连接<br>eg:在/home 目录下创建一个软链接 myroot，连接到/root目录<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210424150108981.png"><br>删除软连接==删除文件</li>
+<li>history指令：查看已经执行过的历史命名，也可以执行历史指令<br>基本语法：history<br>1）history        显示所有历史命令<br>2）history 10    显示最近使用过的10条指令<br>3）!5                执行历史编号为5的指令</li>
+</ul>
+<h2 id="时间日期类指令"><a href="#时间日期类指令" class="headerlink" title="时间日期类指令"></a>时间日期类指令</h2><ul>
+<li>date指令 显示当前日期和设置日期<br>显示日期基本语法：<br>1）date                显示当前时间<br>2）date +%Y        显示当前年份<br>3）date +%m        显示当前月份<br>4）date +%d        显示当前是哪一天<br>5）date “+%Y-%m-%d %H:%M:%S”        显示年月日时分秒<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210425130757247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>设置日期基本语法：date -s 字符串时间<br>eg：设置当前时间为2021-4-25 13:10:20<br>date -s “2021-4-25 13:10:20”</li>
+<li>cal指令 查看日历<br>基本语法：cal [选项]    (功能：不加选项，显示本月日历)</li>
+</ul>
+<p>1)显示当前当月日历：cal<br>2）显示2021年整年日历：cal 2021</p>
+<h2 id="搜索查找类"><a href="#搜索查找类" class="headerlink" title="搜索查找类"></a>搜索查找类</h2><ul>
+<li>find指令<br>find指令将<strong>从指定目录向下递归地遍历其各个子目录</strong>，将满足条件的文件或者目录显示在终端<br>基本语法：find [搜索范围] [选项]<br>选项说明<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/2021042513182757.png"><br>1）按文件名：根据名称查找/home目录下的hello.txt文件<br>find /home -name hello.txt<br>2）按拥有者：查找/opt目录下，用户名称为nobody的文件<br>find /opt -user nobody<br>3）查找整个linux系统下大于200M的文件(+n 大于 -n小于 n等于,单位有k,M,G)<br>find / -size +200M</li>
+<li>locate指令<br>locate指令可以快速定位文件路径。locate指令利用事先建立的系统中所有文件名称及路径名的locate数据库实现快速定位给定文件。Locate指令无需遍历整个文件系统，查询速度较快。为了保证查询结果的准确，管理员必须定期更新locate<br>基本语法：locate 搜索文件<blockquote>
+<p>由于locate指令基于数据库进行查询，所以第一次运行前，必须使用updatedb指令创建locate数据库。<br>eg：使用locate指令快速定位hello.txt文件所在目录</p>
+</blockquote>
+</li>
+<li>which指令 查看某个指令在那个目录下<br>eg: which ls</li>
+<li>grep指令和管道符号 |<br>grep:过滤查找，管道符号 | :将前一个命令结果传递给后面的命令处理<br>基本语法：grep [选项] 查找内容 源文件<br>常用选项：-n 显示匹配行及行号   -i 忽略大小写<br>eg:查找hello.txt文件中，’yes‘所在的行，并显示行号<br>cat hello.txt | grep -n ‘yes’  或grep -n ‘yes’ hello.txt<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210425135618522.png"></li>
+</ul>
+<h2 id="压缩和解压"><a href="#压缩和解压" class="headerlink" title="压缩和解压"></a>压缩和解压</h2><ul>
+<li>gzip/gunzip 指令<br>gzip 用于压缩文件，gunzip用于解压<br>基本语法：<br>gzip 文件                (功能：压缩文件,只能将文件压缩成*.gz文件)<br>gunzip 文件.gz    (功能：解压缩文件命令)<br>1）gzip压缩，将/home下的hello.txt文件进行压缩<br>gzip /home/hello.txt   (源文件直接被压缩，<strong>压缩后源文件不存在</strong>)<br>2）gunzip解压，将/home下的hello.txt.gz文件进行解压缩<br>gunzip hello.txt.gz </li>
+<li>zip/unzip 指令<br>用于<strong>压缩文件或者文件夹</strong>，项目打包发布很有用<br>基本语法：<br>zip [选项] XXX.zip 将要压缩的内容，<strong>压缩后源文件仍存在</strong><br>unzip [选项] xxx.zip，<strong>解压后XXX.zip仍存在</strong><br>zip常用选项：-r ：recursion递归压缩，即压缩目录<br>unzip常用选项：-d&lt;目录&gt;：指定解压文件存放的目录<br>1）将/home下的所有文件(包括home)进行压缩成myhome.zip<br>zip -r myhome.zip /home/<br>2）将myhome.zip解压到/opt/tmp目录下<br>unzip -d /opt/tmp /home/myhome.zip</li>
+<li>tar指令<br>tar指令是打包指令，即可压缩也可解压，最后压缩文件是.tar.gz文件，<strong>压缩后源文件还在</strong><br>基本语法：tar [选项] XXX.tar.gz 打包的内容  (功能：打包目录，压缩文件格式是.tar.gz)<br>常用选项<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210425143632858.png"><blockquote>
+<p><strong>-z 用gzip来压缩/解压缩文件，加上该选项后可以将档案文件进行压缩，但还原时也一定要使用该选项进行解压缩。</strong></p>
+</blockquote>
+1）压缩多个文件，将/home/pig.txt 和/home/cat.txt压缩成 pc.tar.gz<br>tar -zcvf pc.tar.gz /home/pig.txt /home/cat.txt<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210425144221391.png"><br>2）将/home的文件夹压缩成myhome.tar.gz<br>tar -zcvf myhome.tar.gz /home/<br>3）将pc.tar.gz解压到当前目录，切换到/opt/<br>tar -zxvf pc.tar.gz<br>4）将myhome.tar.gz解压到/opt/tmp2目录下<br>tar -zxvf /home/myhome.tar.gz -C /opt/tmp2</li>
+</ul>
 
                 
             </div>
@@ -669,7 +761,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://pengtoboy.github.io/2021/050625004.html">https://pengtoboy.github.io/2021/050625004.html</a>
+                    <a href="https://pengtoboy.github.io/2021/050756799.html">https://pengtoboy.github.io/2021/050756799.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -902,17 +994,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/050720359.html">
+                <a href="/2021/050756799.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="定时任务crond&amp;at Linux">
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="Linux基本指令">
                         
-                        <span class="card-title">定时任务crond&amp;at Linux</span>
+                        <span class="card-title">Linux基本指令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -922,9 +1015,59 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/050726398.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="组管理和权限管理 Linux">
+                        
+                        <span class="card-title">组管理和权限管理 Linux</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -942,55 +1085,6 @@
                     
                     <a href="/tags/Linux/">
                         <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/crond/">
-                        <span class="chip bg-color">crond</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/050652308.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="发表博客步骤及一些细节">
-                        
-                        <span class="card-title">发表博客步骤及一些细节</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            彭嘉欣
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
