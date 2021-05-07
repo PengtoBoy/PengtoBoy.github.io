@@ -4,6 +4,131 @@
   
     
     <entry>
+      <title>VM安装Linux安装选择的三种网络模式</title>
+      <link href="2021/050733119.html"/>
+      <url>2021/050733119.html</url>
+      
+        <content type="html"><![CDATA[<p>1.桥接模式<br>    该模式下，每个Linux系统都会生成一个自己的网络ip用于和外部联系，这样会导致该网段形成网络冲突问题。<br>2.NAT模式<br>    该模式下，每个Linux系统会有虚拟网络ip，且原主机也会产生个ip地址，此ip和Linux相互转换，并且可以通过原主机自己的ip代理访问外界，解决了ip冲突问题。但导致Linux可以通过原ip代理访问外界，外界不能访问Linux。<br>    <img src="https://img-blog.csdnimg.cn/20210417160827740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70#pic_center"></p><p>3.主机模式：相当于独立系统，不和外界交换</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux 远程登录和上传下载 Xshell&amp;Xftp</title>
+      <link href="2021/050725004.html"/>
+      <url>2021/050725004.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Xshell6-amp-Xftp6资源地址"><a href="#Xshell6-amp-Xftp6资源地址" class="headerlink" title="Xshell6&amp;Xftp6资源地址"></a>Xshell6&amp;Xftp6资源地址</h2><p>下载free-for-home-school版本<br>地址：<a href="https://www.netsarang.com/en/free-for-home-school/">https://www.netsarang.com/en/free-for-home-school/</a><br>我上传了一份可免费下载<br><a href="https://download.csdn.net/download/qq_41696518/16746160">点击下载</a></p><h2 id="Xshell6：远程登录"><a href="#Xshell6：远程登录" class="headerlink" title="Xshell6：远程登录"></a>Xshell6：远程登录</h2><p>Xshell是目前最好的远程登录到Linux操作系统的软件，流畅的速度并且完美解决了中文乱码的问题，是目前程序员首选的软件<br>Xshell是一个强大的安全终端模拟软件，它支持SSH1,SSH2，以及Windows平台下的telnet协议<br>Xshell可以在Windows界面下访问远端不同系统的服务器，从而达到远程控制终端的目的</p><h3 id="Xshell配置和使用"><a href="#Xshell配置和使用" class="headerlink" title="Xshell配置和使用"></a>Xshell配置和使用</h3><p><strong>管理员身份运行Xshell.exe</strong><br><img src="https://img-blog.csdnimg.cn/20210418231407920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>第一次运行点击<strong>新建</strong><br><img src="https://img-blog.csdnimg.cn/20210418231446459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>注意：这里名称可随便输入，但主机号要输入 要连接的Linux的ip地址。然后点击确认。<br>第一次使用要输入登录用户名和密码。<br>双击刚刚创建的主机名<br><img src="https://img-blog.csdnimg.cn/20210418231651812.png"><br>输入用户名和密码<br><img src="https://img-blog.csdnimg.cn/20210418231706271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>输入完成后，第一次会跳出使用一次还是保存以后也可使用。根据需求选择即可。<br>完毕，即可在Xshell中连接linux</p><h2 id="Xftp6：远程上传下载文件"><a href="#Xftp6：远程上传下载文件" class="headerlink" title="Xftp6：远程上传下载文件"></a>Xftp6：远程上传下载文件</h2><p>是一个基于Windows平台的功能强大的SFTP、FTP文件传输软件。使用了Xftp以后，windows用户能安全地在UNIX/Linux和Windows PC之间传输文件</p><h3 id="Xftp安装和配置"><a href="#Xftp安装和配置" class="headerlink" title="Xftp安装和配置"></a>Xftp安装和配置</h3><p><strong>管理员身份运行安装程序Xftp.exe</strong><br><img src="https://img-blog.csdnimg.cn/20210419140725983.png"><br>傻瓜式安装即可。安装完成，双击打开Xftp软件<br><img src="https://img-blog.csdnimg.cn/20210419141116287.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"><br>第一次则选择新建，步骤和Xshell一样<br><img src="https://img-blog.csdnimg.cn/20210419141602461.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p><p>注意协议和端口(要选22号端口)<br><img src="https://img-blog.csdnimg.cn/20210419142321754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p><p>左边Windows右边Linux<br>要想上传下载，只需要选择双飞对应文件位置，拖动即可</p><h2 id="出现乱码问题，可按一下步骤解决"><a href="#出现乱码问题，可按一下步骤解决" class="headerlink" title="出现乱码问题，可按一下步骤解决"></a>出现乱码问题，可按一下步骤解决</h2><p>点击属性<br><img src="https://img-blog.csdnimg.cn/20210419142724126.png"><br>选择选项，将编码选择UTF-8<br><img src="https://img-blog.csdnimg.cn/20210419142839818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>忘记root密码，重置方法</title>
+      <link href="2021/050759561.html"/>
+      <url>2021/050759561.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="重置root密码"><a href="#重置root密码" class="headerlink" title="重置root密码"></a>重置root密码</h2><ol><li>启动系统，进入开机界面，在界面中按”e”进入编辑界面<br><img src="https://img-blog.csdnimg.cn/20210420125420703.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li><li>进入编辑界面后，使用键盘上下键把光标往下移动，找到”Linux16”开头内容所在行，在行的最后面输入： <strong>init=/bin/sh</strong> <img src="https://img-blog.csdnimg.cn/20210420125850689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></li><li>接着，输入完成后，直接按快捷键：Ctrl+x 进入单用户模式</li><li>接着在光标闪烁位置输入：mount -o remount,rw / (注意单词间有空格)。完成后回车<br><img src="https://img-blog.csdnimg.cn/20210420130211154.png"></li><li>在新的一行最后输入：passwd，完成后回车。输入密码，然后再确认密码即可。密码修改成功后，会显示passwd……样式，说明成功<br><img src="https://img-blog.csdnimg.cn/2021042013042827.png"></li><li>接着，在鼠标闪烁位置(最后一行) 输入：touch /.autorelabel(注意touch后有空格),完成回车</li><li>继续在光标闪烁位置，输入：exec /sbin/init  (注意exec后有空格)。完成回车，等待系统自动修改密码，（时间较长），完成后，系统会重启。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>压缩和解压指令</title>
+      <link href="2021/050755135.html"/>
+      <url>2021/050755135.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="压缩和解压"><a href="#压缩和解压" class="headerlink" title="压缩和解压"></a>压缩和解压</h2><h3 id="gzip-gunzip-指令"><a href="#gzip-gunzip-指令" class="headerlink" title="gzip/gunzip 指令"></a>gzip/gunzip 指令</h3><p>gzip 用于压缩文件，gunzip用于解压<br>基本语法：<br>gzip 文件                (功能：压缩文件,只能将文件压缩成*.gz文件)<br>gunzip 文件.gz    (功能：解压缩文件命令)<br>1）gzip压缩，将/home下的hello.txt文件进行压缩<br>gzip /home/hello.txt   (源文件直接被压缩，<strong>压缩后源文件不存在</strong>)<br>2）gunzip解压，将/home下的hello.txt.gz文件进行解压缩<br>gunzip hello.txt.gz </p><h3 id="zip-unzip-指令"><a href="#zip-unzip-指令" class="headerlink" title="zip/unzip 指令"></a>zip/unzip 指令</h3><p>用于<strong>压缩文件或者文件夹</strong>，项目打包发布很有用<br>基本语法：<br>zip [选项] XXX.zip 将要压缩的内容，<strong>压缩后源文件仍存在</strong><br>unzip [选项] xxx.zip，<strong>解压后XXX.zip仍存在</strong><br>zip常用选项：-r ：recursion递归压缩，即压缩目录<br>unzip常用选项：-d&lt;目录&gt;：指定解压文件存放的目录<br>1）将/home下的所有文件(包括home)进行压缩成myhome.zip<br>zip -r myhome.zip /home/<br>2）将myhome.zip解压到/opt/tmp目录下<br>unzip -d /opt/tmp /home/myhome.zip</p><h3 id="tar指令"><a href="#tar指令" class="headerlink" title="tar指令"></a>tar指令</h3><p>tar指令是打包指令，即可压缩也可解压，最后压缩文件是.tar.gz文件，<strong>压缩后源文件还在</strong><br>基本语法：tar [选项] XXX.tar.gz 打包的内容  (功能：打包目录，压缩文件格式是.tar.gz)<br>常用选项<br><img src="https://img-blog.csdnimg.cn/20210425143632858.png"></p><blockquote><p><strong>-z 用gzip来压缩/解压缩文件，加上该选项后可以将档案文件进行压缩，但还原时也一定要使用该选项进行解压缩。</strong></p></blockquote><p>1）压缩多个文件，将/home/pig.txt 和/home/cat.txt压缩成 pc.tar.gz<br>tar -zcvf pc.tar.gz /home/pig.txt /home/cat.txt<br><img src="https://img-blog.csdnimg.cn/20210425144221391.png"><br>2）将/home的文件夹压缩成myhome.tar.gz<br>tar -zcvf myhome.tar.gz /home/<br>3）将pc.tar.gz解压到当前目录，切换到/opt/<br>tar -zxvf pc.tar.gz<br>4）将myhome.tar.gz解压到/opt/tmp2目录下<br>tar -zxvf /home/myhome.tar.gz -C /opt/tmp2</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>运行级别—Linux</title>
+      <link href="2021/050714517.html"/>
+      <url>2021/050714517.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a>运行级别</h2><ul><li>基本介绍<br>运行级别说明：<br>  0：关机<br>  1：单用户【找回丢失的密码】<br>  2：多用户状态没有网络服务<br>  3：多用户状态有网络服务<br>  4：系统未使用保留给用户<br>  5：图形界面<br>  6：系统重启<br>常用的运行级别为3、5，也可指定默认运行级别<br>CentOS7中，可以通过<strong>init 级别</strong>切换运行级别<br><img src="https://img-blog.csdnimg.cn/20210420122728552.png"></li></ul><h3 id="指定默认运行界别"><a href="#指定默认运行界别" class="headerlink" title="指定默认运行界别"></a>指定默认运行界别</h3><ul><li>CentOS7前后运行级别说明<br>在CentOS7以前，在/etc/inittab文件中可进行修改<br>在CentOS5后进行了简化（分为两种），如下：</li></ul><p><strong>multi-user.target</strong>:analogous to runlevel 3   ：即多用户级别类似于原来的级别3<br><strong>graphical.target</strong>:analogous to runlevel 5       ：即图形化级别类似于原来的5<br># To view current default target,run (查看当前默认运行级别指令):<br>systemctl get-default<br># To set a default target,run(设置默认运行级别指令):<br>systemctl set-default TARGET.target<br><img src="https://img-blog.csdnimg.cn/20210420123852984.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux基本指令</title>
       <link href="2021/050756799.html"/>
       <url>2021/050756799.html</url>

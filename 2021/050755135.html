@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据类型 Java, HTML,CSS,JavaScript,JQuery,React,Vue.js,Linux">
+    <meta name="keywords" content="压缩和解压指令, HTML,CSS,JavaScript,JQuery,React,Vue.js,Linux">
     <meta name="description" content="专注于IT，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据类型 Java | Mokapeng</title>
+    <title>压缩和解压指令 | Mokapeng</title>
     <link rel="icon" type="image/gif" href="/loading1.gif">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -452,12 +452,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据类型 Java</h1>
+                    <h1 class="description center-align post-title">压缩和解压指令</h1>
                 </div>
             </div>
         </div>
@@ -573,8 +573,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
                             </a>
                         
                     </div>
@@ -585,8 +585,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
                             </a>
                         
                     </div>
@@ -612,7 +612,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    457
                 </div>
                 
 
@@ -629,116 +629,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210430153349546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjk2NTE4,size_16,color_FFFFFF,t_70"></p>
+                <h2 id="压缩和解压"><a href="#压缩和解压" class="headerlink" title="压缩和解压"></a>压缩和解压</h2><h3 id="gzip-gunzip-指令"><a href="#gzip-gunzip-指令" class="headerlink" title="gzip/gunzip 指令"></a>gzip/gunzip 指令</h3><p>gzip 用于压缩文件，gunzip用于解压<br>基本语法：<br>gzip 文件                (功能：压缩文件,只能将文件压缩成*.gz文件)<br>gunzip 文件.gz    (功能：解压缩文件命令)<br>1）gzip压缩，将/home下的hello.txt文件进行压缩<br>gzip /home/hello.txt   (源文件直接被压缩，<strong>压缩后源文件不存在</strong>)<br>2）gunzip解压，将/home下的hello.txt.gz文件进行解压缩<br>gunzip hello.txt.gz </p>
+<h3 id="zip-unzip-指令"><a href="#zip-unzip-指令" class="headerlink" title="zip/unzip 指令"></a>zip/unzip 指令</h3><p>用于<strong>压缩文件或者文件夹</strong>，项目打包发布很有用<br>基本语法：<br>zip [选项] XXX.zip 将要压缩的内容，<strong>压缩后源文件仍存在</strong><br>unzip [选项] xxx.zip，<strong>解压后XXX.zip仍存在</strong><br>zip常用选项：-r ：recursion递归压缩，即压缩目录<br>unzip常用选项：-d&lt;目录&gt;：指定解压文件存放的目录<br>1）将/home下的所有文件(包括home)进行压缩成myhome.zip<br>zip -r myhome.zip /home/<br>2）将myhome.zip解压到/opt/tmp目录下<br>unzip -d /opt/tmp /home/myhome.zip</p>
+<h3 id="tar指令"><a href="#tar指令" class="headerlink" title="tar指令"></a>tar指令</h3><p>tar指令是打包指令，即可压缩也可解压，最后压缩文件是.tar.gz文件，<strong>压缩后源文件还在</strong><br>基本语法：tar [选项] XXX.tar.gz 打包的内容  (功能：打包目录，压缩文件格式是.tar.gz)<br>常用选项<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210425143632858.png"></p>
 <blockquote>
-<p><strong>注意：C/C++中char占1个字节。但Java中编码是Unicode16，所以一个char占2个字节</strong></p>
+<p><strong>-z 用gzip来压缩/解压缩文件，加上该选项后可以将档案文件进行压缩，但还原时也一定要使用该选项进行解压缩。</strong></p>
 </blockquote>
-<h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><p>Java的整数类型就是用于存放整数的，如1，12，39等<br>类型     | 占用存储空间    | 范围<br>——– | —–    | ——<br>byte [字节]  | 1字节    |-128 ~ 127<br>short [短整型]  | 2字节    | -2^15 ~ 2^15-1<br>int [整型]  |  4字节    | 4字节 | -2^31 ~ 2^31-1<br>long [长整型]     | 8字节| -2^63 ~ 2^63-1</p>
-<ol>
-<li>Java各整数类型有固定的范围和字段长度，不受OS不同的影响</li>
-<li>Java的整型常量默认为int，要声明long型常量须后加’l’或’L’</li>
-<li>bit：计算机中的最小存储单位。byte：计算机中基本存储单位，1byte=8bit</li>
-</ol>
-<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><p>Java的浮点类型可以表示一个小数，如123.4</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>占用存储空间</th>
-<th>范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单精度float</td>
-<td>4字节</td>
-<td>-3.403E38 ~ 3.403E38</td>
-</tr>
-<tr>
-<td>双精度double</td>
-<td>8字节</td>
-<td>-1.798E308 ~ 1.798E308</td>
-</tr>
-</tbody></table>
-<ol>
-<li>关于浮点数在机器中存放形式：浮点数=符号位+指数位+尾数为</li>
-<li>尾数部分可能丢失，造成精度损失(小数都是近似值)</li>
-<li>Java的浮点型常量默认为double，声明float要加’f’ 或 ‘F’</li>
-<li>浮点陷阱：double num=8.1 / 3 ≠ 2.7 所以当对<strong>运算结果为小数</strong>时，尽量不要进行相等判断，应该是两数差值在一定范围内就认为相等</li>
-</ol>
-<h3 id="字符类型-char"><a href="#字符类型-char" class="headerlink" title="字符类型(char)"></a>字符类型(char)</h3><p>字符类型可以表示单个字符，字符类型是char，占两个字节(可存汉字)多个字符可以用字符串String存储</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">char</span> c1<span class="token operator">=</span><span class="token string">'a'</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> c2<span class="token operator">=</span><span class="token string">'\t'</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> c3<span class="token operator">=</span><span class="token string">'哈'</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> c4<span class="token operator">=</span><span class="token number">97</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//说明字符类型可直接存放一个数字，但在输出时是Unicode码对应的字符</span>
-</code></pre>
-<p>使用细节：</p>
-<ol>
-<li>字符常量使用单引号</li>
-<li>Java还允许使用转义字符’'来将其后的字符变成特殊字符型常量。eg’\n’</li>
-<li>在java中char的本质是一个整数，在输出时是Unicode码对应的字符</li>
-<li>char类型是可以进行运算的，相当于一个整数<blockquote>
-<p>字符类型存储到计算机中，是存储字符对应的码值(整数)<br>eg：’a’ –&gt;码值97 –&gt; 二进制 –&gt;存储</p>
-</blockquote>
-</li>
-</ol>
-<p>字符编码表详解：</p>
-<ul>
-<li>ASCII：一个字节表示，一共表示128个字符，实际最多可表示256，但只用到128个，缺点就是表示字符过少</li>
-<li>Unicode：固定大小的编码，使用两个字节表示字符，字符和汉字统一占用2个字节，浪费空间。<br>优点：将世界所有符号都纳入其中(2的16次方)，使用Unicode不会有乱码问题，且Unicode兼容ASCII码<br>缺点：一个字母或汉字都占2个字符，太浪费空间</li>
-<li>utf-8：大小可变的编码，字母使用1字符，汉字使用3个字节。是互联网使用最广泛的一种Unicode的改进方式。最大优势就是可变长编码。</li>
-<li>gbk：可以表示汉字，且范围广，字母使用1个字节，汉字使用2个</li>
-<li>gb2312：可表示汉字，gb2312&lt;gbk</li>
-<li>big5：繁体中文，台湾，香港</li>
-</ul>
-<h3 id="布尔类型boolean"><a href="#布尔类型boolean" class="headerlink" title="布尔类型boolean"></a>布尔类型boolean</h3><ol>
-<li>布尔类型也叫boolean类型，只允许取值true，false，null</li>
-<li>boolean类型占1个字符</li>
-<li>boolean类型不可用非0之类的代表true或false</li>
-</ol>
-<h2 id="基本数据类型转换"><a href="#基本数据类型转换" class="headerlink" title="基本数据类型转换"></a>基本数据类型转换</h2><p>当java程序进行赋值或运算时，精度小的类型可以自动转换为精度大的数据类型，这就是<strong>自动类型转换</strong><br>char –&gt; int –&gt; long –&gt;float –&gt; double<br>byte –&gt; short –&gt; int –&gt;long –&gt; float –&gt; double<br>自动类型转换注意的细节：</p>
-<ol>
-<li>有多种数据类型混合运算时，系统会先自动转换成精度最大的那种数据类型，然后再计算</li>
-<li>(byte、short)和char之间不会相互自动转换</li>
-<li><strong>byte、short、char三者之间或各自单独都可以计算，但会首先转为int类型</strong>，也就是byte+byte或byte+short都会变为int</li>
-<li>boolean不参与转换<pre class=" language-java"><code class="language-java"><span class="token keyword">float</span> n1 <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">1.1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//报错，1.1默认为double，float精度小于double不可转换</span>
-<span class="token keyword">byte</span> b1<span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//正确，会先判断该数是否再byte范围内，如果在就正确</span>
-<span class="token keyword">short</span> s1<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">short</span> s2 <span class="token operator">=</span> b1 <span class="token operator">+</span> s1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//报错，byte,short,char混合运算会转为int，而int精度高于short</span>
-<span class="token keyword">byte</span> b2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">byte</span> b3 <span class="token operator">=</span> b1 <span class="token operator">+</span> b2<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//报错，byte+byte也会先转为int，int精度高于byte</span>
-</code></pre>
-</li>
-</ol>
-<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>自动类型转换的逆过程，将精度高的转为精度低的。使用时要加上强制转换符()，但可能造成精度损失或溢出。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token number">1.9</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1  精度损失</span>
-<span class="token keyword">byte</span> b1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">)</span><span class="token number">2000</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// -48 数据溢出</span>
-</code></pre>
-<p>强值转换使用细节：</p>
-<ol>
-<li>强制转换符号只针对最近的操作符<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token number">10</span><span class="token operator">*</span><span class="token number">3.5</span><span class="token operator">+</span><span class="token number">6</span><span class="token operator">*</span><span class="token number">1.5</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 报错，这强制转换只针对10，所以运算总体仍未double类型</span>
-</code></pre>
-</li>
-<li>char类型可以保存int的常量值，但不能保存int变量值，需要强转</li>
-<li> <strong>byte、short、char三者之间或各自单独都可以计算，但会首先转为int类型</strong>，也就是byte+byte或byte+short都会变为int</li>
-</ol>
-<h2 id="基本数据类型和String类型的转换"><a href="#基本数据类型和String类型的转换" class="headerlink" title="基本数据类型和String类型的转换"></a>基本数据类型和String类型的转换</h2><h3 id="基本数据类型转为String类型"><a href="#基本数据类型转为String类型" class="headerlink" title="基本数据类型转为String类型"></a>基本数据类型转为String类型</h3><p>语法：将基本类型的值+””即可</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-String s1 <span class="token operator">=</span> n1 <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="String类型转为基本数据类型"><a href="#String类型转为基本数据类型" class="headerlink" title="String类型转为基本数据类型"></a>String类型转为基本数据类型</h3><p>语法：通过基本数据类型的包装类调用parseXXX方法即可</p>
-<pre class=" language-java"><code class="language-java">String s1 <span class="token operator">=</span> <span class="token string">"123"</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> n1 <span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">double</span> d1 <span class="token operator">=</span> Double<span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p>特殊：字符串转为char，eg：得到字符串第一个字符</p>
-<pre class=" language-java"><code class="language-java">String s <span class="token operator">=</span> <span class="token string">"123"</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<blockquote>
-<p>字符串转为基本数据类型时，要是格式不匹配会直接报异常！</p>
-</blockquote>
+<p>1）压缩多个文件，将/home/pig.txt 和/home/cat.txt压缩成 pc.tar.gz<br>tar -zcvf pc.tar.gz /home/pig.txt /home/cat.txt<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210425144221391.png"><br>2）将/home的文件夹压缩成myhome.tar.gz<br>tar -zcvf myhome.tar.gz /home/<br>3）将pc.tar.gz解压到当前目录，切换到/opt/<br>tar -zxvf pc.tar.gz<br>4）将myhome.tar.gz解压到/opt/tmp2目录下<br>tar -zxvf /home/myhome.tar.gz -C /opt/tmp2</p>
 
                 
             </div>
@@ -765,7 +662,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://pengtoboy.github.io/2021/050748647.html">https://pengtoboy.github.io/2021/050748647.html</a>
+                    <a href="https://pengtoboy.github.io/2021/050755135.html">https://pengtoboy.github.io/2021/050755135.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -803,8 +700,8 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
                                 </a>
                             
                         </div>
@@ -1002,13 +899,13 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/050726398.html">
+                <a href="/2021/050759561.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="组管理和权限管理 Linux">
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="忘记root密码，重置方法">
                         
-                        <span class="card-title">组管理和权限管理 Linux</span>
+                        <span class="card-title">忘记root密码，重置方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1051,13 +948,13 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/050720359.html">
+                <a href="/2021/050714517.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="定时任务crond&amp;at Linux">
+                        <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="运行级别—Linux">
                         
-                        <span class="card-title">定时任务crond&amp;at Linux</span>
+                        <span class="card-title">运行级别—Linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1087,10 +984,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                     
                     <a href="/tags/Linux/">
                         <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                    <a href="/tags/crond/">
-                        <span class="chip bg-color">crond</span>
                     </a>
                     
                 </div>
