@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML,CSS,JavaScript,JQuery,React,Vue.js,Linux">
+    <meta name="keywords" content="分类: 算法, HTML,CSS,JavaScript,JQuery,React,Vue.js,Linux">
     <meta name="description" content="专注于IT，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Mokapeng</title>
+    <title>分类: 算法 | Mokapeng</title>
     <link rel="icon" type="image/gif" href="/loading1.gif">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -450,61 +450,14 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                Welcome
+                    
                 
             </div>
 
@@ -542,251 +495,65 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://github.com/PengtoBoy" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/PengtoBoy" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1196698346@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1196698346" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1196698346" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/Linux/" title="Linux: 10">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">Linux
+                        <span class="tag-length">10</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Java/" title="Java: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">Java
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #D5F5E3;">算法
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+            </div>
         </div>
     </div>
 </div>
 
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-
-
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
-
-<div class="row">
-
-    
-    
-    <div class="col s12" >
-        
-            <div class="post-card" style="background-image: url('/medias/featureimages/3.jpg')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Linux/" class="category">Linux</a>
-                        
-                    
-                </div>
-                <a href="/2021/050756799.html">
-                    <h3 class="post-title">Linux基本指令</h3>
-                </a>
-                <p class="post-description">关机、重启shutdown -h now     立刻进行关机 (-h 即halt 停止)shutdown -h 1            1分钟后关机(如果直接shut</p>
-                <a href="/2021/050756799.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
-            <div class="post-card" style="background-image: url('/medias/featureimages/0.jpg')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Linux/" class="category">Linux</a>
-                        
-                    
-                </div>
-                <a href="/2021/050617999.html">
-                    <h3 class="post-title">文件/目录权限 Linux</h3>
-                </a>
-                <p class="post-description">本文介绍Linux操作系统下的文件/目录权限</p>
-                <a href="/2021/050617999.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
-            <div class="post-card" style="background-image: url('/medias/featureimages/7.jpg')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Linux/" class="category">Linux</a>
-                        
-                    
-                </div>
-                <a href="/2021/050720359.html">
-                    <h3 class="post-title">定时任务crond&amp;at Linux</h3>
-                </a>
-                <p class="post-description">Linux定时执行任务有两种一种是周而复始类，反复执行(crond)，一种是定时执行一次任务(at)
-crond概述crontab 进行定时</p>
-                <a href="/2021/050720359.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-
-</div>
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
 
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2021/052025855.html">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="递归调用解决迷宫问题">
@@ -794,7 +561,6 @@ crond概述crontab 进行定时</p>
                             <span class="card-title">递归调用解决迷宫问题</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -833,574 +599,9 @@ map中 0：可以走 1：障碍物 2：标记已走通路线 3：标记死路
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050733119.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="VM安装Linux安装选择的三种网络模式">
-                            
-                            <span class="card-title">VM安装Linux安装选择的三种网络模式</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                1.桥接模式    该模式下，每个Linux系统都会生成一个自己的网络ip用于和外部联系，这样会导致该网段形成网络冲突问题。2.NAT模式    该模式下，每个Linux系统会有虚拟网络ip，且原主机也会产生个ip地址，此ip和Linux相
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050725004.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="Linux 远程登录和上传下载 Xshell&amp;Xftp">
-                            
-                            <span class="card-title">Linux 远程登录和上传下载 Xshell&amp;Xftp</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Xshell6&amp;Xftp6资源地址下载free-for-home-school版本地址：https://www.netsarang.com/en/free-for-home-school/我上传了一份可免费下载点击下载
-Xshell
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050759561.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="忘记root密码，重置方法">
-                            
-                            <span class="card-title">忘记root密码，重置方法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                重置root密码
-启动系统，进入开机界面，在界面中按”e”进入编辑界面
-进入编辑界面后，使用键盘上下键把光标往下移动，找到”Linux16”开头内容所在行，在行的最后面输入： init=/bin/sh 
-接着，输入完成后，直接按快捷键：Ct
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050755135.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="压缩和解压指令">
-                            
-                            <span class="card-title">压缩和解压指令</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                压缩和解压gzip/gunzip 指令gzip 用于压缩文件，gunzip用于解压基本语法：gzip 文件                (功能：压缩文件,只能将文件压缩成*.gz文件)gunzip 文件.gz    (功能：解压缩文件命令
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050714517.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="运行级别—Linux">
-                            
-                            <span class="card-title">运行级别—Linux</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                运行级别
-基本介绍运行级别说明：  0：关机  1：单用户【找回丢失的密码】  2：多用户状态没有网络服务  3：多用户状态有网络服务  4：系统未使用保留给用户  5：图形界面  6：系统重启常用的运行级别为3、5，也可指定默认运行级别C
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050756799.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="Linux基本指令">
-                            
-                            <span class="card-title">Linux基本指令</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                关机、重启shutdown -h now     立刻进行关机 (-h 即halt 停止)shutdown -h 1            1分钟后关机(如果直接shutdown 默认为这个)shutdown -r now        立
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050726398.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="组管理和权限管理 Linux">
-                            
-                            <span class="card-title">组管理和权限管理 Linux</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                组基本介绍在Linux中的每个用户都必须属于一个组，不能独立于组外。在Linux中每个文件有所有者、所在组、其他组的概念。
-
-所有者
-所在组
-其他组
-改变用户所在组
-
-文件/目录 修改所有者 所在组一般为文件的创建者，谁创建了该文件，就自然
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050748647.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="数据类型 Java">
-                            
-                            <span class="card-title">数据类型 Java</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                数据类型
-
-注意：C/C++中char占1个字节。但Java中编码是Unicode16，所以一个char占2个字节
-
-整数类型Java的整数类型就是用于存放整数的，如1，12，39等类型     | 占用存储空间    | 范围——– | 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Java/">
-                            <span class="chip bg-color">Java</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050720359.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="定时任务crond&amp;at Linux">
-                            
-                            <span class="card-title">定时任务crond&amp;at Linux</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Linux定时执行任务有两种一种是周而复始类，反复执行(crond)，一种是定时执行一次任务(at)
-crond概述crontab 进行定时任务的设置任务调度：指系统在某个时间执行特定的命令或程序调度分类：
-
-系统工作：有些系统工作必须周而
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                        <a href="/tags/crond/">
-                            <span class="chip bg-color">crond</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050625004.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="JVM、JDK、JER介绍">
-                            
-                            <span class="card-title">JVM、JDK、JER介绍</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                JVM(Java virtue machine)1）JVM是一个虚拟计算机，具有指令集并使用不同的存储区域。负责执行指令，管理数据、内存、寄存器，包含在JDK中2） 对于不同的平台，有不同的虚拟机。3）Java 虚拟机机制屏蔽了底层运行平台
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Linux/">
-                            <span class="chip bg-color">Linux</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/050652308.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/loading.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="发表博客步骤及一些细节">
-                            
-                            <span class="card-title">发表博客步骤及一些细节</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                步骤
-在博客目录下Git Bash –&gt;  hexo new “文章名字” 
-完成第一步后，会在\source\_posts目录下生成一个对于的md文件
-在md文件中编写博客
-完成后 hexo clean –&gt; hexo g –
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                彭嘉欣
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                            <span class="chip bg-color">随笔</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
-
 </main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a class="left btn-floating btn-large disabled">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a href="/page/2/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
 
 
 
